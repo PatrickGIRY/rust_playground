@@ -2,7 +2,7 @@
 mod tests {
     fn prime_factors(number: u64) -> Vec<u64> {
         let mut result = vec![];
-        for divisor in 2..=number {
+        for divisor in 2..(number+1) {
             if number % divisor == 0 {
                 result.push(divisor);
                 result.append(&mut prime_factors(number / divisor));
